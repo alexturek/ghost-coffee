@@ -13,7 +13,8 @@ module.exports = (grunt) ->
         jasmine:
             run_all:
                 src: 'lib/compiled.js'
-                specs: 'lib/specs.js'
+                options:
+                    specs: 'lib/specs.js'
 
         # not working yet
         watch:
