@@ -11,16 +11,18 @@ module.exports = (grunt) ->
                 options:
                     bare: true
         jasmine:
-            run_all:
+            run_tests:
                 src: 'lib/compiled.js'
                 options:
                     specs: 'lib/specs.js'
-
-        # not working yet
         watch:
             scripts:
-                files: ['**/*.coffee']
+                files: ['src/*', 'spec/*', 'Gruntfile.coffee', '!.*']
                 tasks: ['coffee', 'jasmine']
+                options:
+                    display: 'short'
+                    summary: false
+                    debounceDelay: 500
     }
 
     grunt.loadNpmTasks 'grunt-contrib-coffee'

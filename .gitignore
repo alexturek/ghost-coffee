@@ -1,4 +1,4 @@
 .grunt/
-lib/
+lib/*
 node_modules/
 _SpecRunner.html
